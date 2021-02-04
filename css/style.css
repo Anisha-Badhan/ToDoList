@@ -1,0 +1,165 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	overflow: hidden;
+	background-image:url(https://wallpapercave.com/wp/wp3525546.jpg);
+	background-size:cover;
+}
+
+.container{
+	z-index:1;
+	width: 50vw;
+	margin-top: 30px;
+}
+
+.input{
+	padding-left: 0px;
+}
+
+.toDo{
+	margin-bottom:20px;
+}
+
+.glass{
+	border: 1px solid rgba(255,255,255,0.5);
+	border-right: 1px solid rgba(255,255,255,0.2);
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+	box-shadow: 0 5px 45px rgba(0,0,0,0.1);
+	backdrop-filter: blur(2px);
+	transition: 0.5s;
+	overflow: hidden;
+	item-spacing: 2px;
+}
+
+.glass::before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50px;
+	height: 200%;
+	background: rgba(255,255,255,0.5);
+	transform: skewX(45deg) translateX(80vw);
+	transition: 0.5s;
+}
+
+.glass:hover::before{
+	transform: skewX(45deg) translateX(-150px) ;
+}
+
+.glass:hover{
+	transform: translateY(-5px)translateX(-5px);
+}
+
+.text{
+  font-family: 'Roboto Condensed';
+  font-size: 30px;
+  line-height: 32px;
+  letter-spacing: 8px;
+  color: #fff;
+  top: 18px;
+  position: relative;
+  margin-top: 20px;
+}
+
+#newTask{
+	border: 0.01px solid #c9f771f5;
+	height: 25px;
+	color: #1e7e34;
+	font-size: 15px;
+	font-weight: 20;
+	padding: 2px;
+	background-color: #d8f3a694;
+	width: 20vw;
+	padding-left: 2%;
+	padding-right: 2%;
+}
+
+textarea:focus, input:focus{
+	outline: none;
+}
+
+#addItem{
+	width: 80px;
+	height: 25px;
+	background-color: #c9f771f5;
+	line-height: 0px;
+}
+
+.done, .remove{
+	float: right;
+	margin-right: 30px;
+	color: #c9f771f5;
+}
+
+.fa{
+	font-size: larger;
+}
+
+button:focus{
+	outline: none;
+	padding: 2px;
+}
+
+button{
+	background: transparent;
+	border: none;
+}
+
+.task{
+	height: 25px;
+	width: 40vw;
+	padding-left: 2%;
+	padding-right: 2%;
+	background: transparent;
+	border-width:0px;
+    border:none;
+	color: #c9f771f5;
+}
+
+li {
+    margin-left: 5%;
+	margin-right:3%;
+	/* height: 30px; */
+}
+
+#newItem{
+  font-family: 'Roboto Condensed';
+  font-size: 20px;
+  line-height: 12px;
+  letter-spacing: 2px;
+  color: #c9f771f5;
+  padding-right: 10px;
+}
+
+#todo{
+  font-family: 'Roboto Condensed';
+  /* font-size: 30px; */
+  letter-spacing: 2px;
+  color: #fff;
+  padding-right: 10px;
+  display: flex;
+}
+
+.Item span{
+	height: 50px;
+	margin-right: 10px;
+	width: 60px;
+	background-color: #c9f771f5;
+
+}
+
+.input{
+	display: inline-block;
+	padding-block: 4%;
+	padding-left: 8%;
+	justify-content: center;
+	
+}
+.completed{
+	text-decoration-line: line-through;
+}
