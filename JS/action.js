@@ -4,8 +4,7 @@ $(document).ready(function(){
 			   $(".toDo").hide();
 			  
 			    $(".delete").click(function(){
-					$("#newTask").val("");
-									
+					$("#newTask").val("");					
 			    })
 			    $("#newTask").bind('keypress', function(e) {
 					if(e.keyCode==13){
