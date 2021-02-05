@@ -71,7 +71,7 @@ body{
 	height: 25px;
 	color: #1e7e34;
 	font-size: 15px;
-	font-weight: 20;
+	font-weight: 40;
 	padding: 2px;
 	background-color: #d8f3a694;
 	width: 20vw;
@@ -88,6 +88,7 @@ textarea:focus, input:focus{
 	height: 25px;
 	background-color: #c9f771f5;
 	line-height: 0px;
+	margin-left:10px;
 }
 
 .done, .remove{
@@ -108,6 +109,18 @@ button:focus{
 button{
 	background: transparent;
 	border: none;
+}
+
+#addItem:hover, .fa:hover{
+	color: #276b05;
+	background: #f5f7be;
+	box-shadow: 0 0 10px #f5f7be, 0 0 40px #f5f7be, 0 0 80px #f5f7be;
+}
+
+#newTask:focus{
+	color: #276b05;
+	background: #d8f3a694;
+	box-shadow: 0 0 5px #f5f7be, 0 0 0px #f5f7be, 0 0 10px #f5f7be;
 }
 
 .task{
@@ -160,6 +173,7 @@ li {
 	justify-content: center;
 	
 }
+
 .completed{
 	text-decoration-line: line-through;
 }

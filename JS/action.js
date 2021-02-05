@@ -5,11 +5,13 @@ $(document).ready(function(){
 			  
 			    $(".delete").click(function(){
 					$("#newTask").val("");
-				if ($("ul").is(':empty')){
-						$(".toDo").hide();
-					}					
+									
 			    })
-			  
+			    $("#newTask").bind('keypress', function(e) {
+					if(e.keyCode==13){
+						 $("#addItem").trigger('click');
+					 }
+				});
 			    $("#addItem").on('click',function(){
 					let newToDo = $("#newTask").val();
 					if(newToDo != ""){
@@ -20,7 +22,10 @@ $(document).ready(function(){
 			    })
 				
 					$('#incomplete-tasks').on('click', '.remove',function(){
-						$(this).parent().remove();
+						$(this).parent().fadeOut(500);
+						if($("#incomplete-tasks").html().trim() == ""){
+						$(".toDo").hide();
+					}
 					});
 					
 					$('#incomplete-tasks').on('click', '.done', function() { 
