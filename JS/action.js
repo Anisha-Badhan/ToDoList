@@ -28,8 +28,19 @@ $(document).ready(function(){
 					}
 					});
 					
+					$('#completed-tasks').on('click', '.remove',function(){
+						$(this).parent().fadeOut(500);
+						if($("#completed-tasks").html().trim() == ""){
+						$(".toDo").hide();
+					}
+					});
+					
 					$('#incomplete-tasks').on('click', '.done', function() { 
-							$(this).parent().toggleClass("completed") 
+							/* $(this).parent().toggleClass("completed")  */
+							let temp = $(this).parent().text()
+							$(this).parent().remove()
+							console.log(temp)
+							$("#completed-tasks").append('<li class="task">'+temp+'<button class="remove"><i class="fa fa-trash" aria-hidden="true"></i></button></li>')
 							
 					}); 
 				});

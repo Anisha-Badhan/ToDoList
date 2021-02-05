@@ -120,7 +120,7 @@ button{
 #newTask:focus{
 	color: #276b05;
 	background: #d8f3a694;
-	box-shadow: 0 0 5px #f5f7be, 0 0 0px #f5f7be, 0 0 10px #f5f7be;
+	box-shadow: 0 0 5px #f5f7be, 0 0 10px #f5f7be;
 }
 
 .task{
@@ -149,7 +149,7 @@ li {
   padding-right: 10px;
 }
 
-#todo{
+.todo{
   font-family: 'Roboto Condensed';
   /* font-size: 30px; */
   letter-spacing: 2px;
@@ -163,7 +163,6 @@ li {
 	margin-right: 10px;
 	width: 60px;
 	background-color: #c9f771f5;
-
 }
 
 .input{
